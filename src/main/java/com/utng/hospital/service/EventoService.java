@@ -100,7 +100,7 @@ public class EventoService implements IEventoService{
 			response.setData(evento2);
 		}else {
 			response.setStatus("ERROR");
-			response.setMessage("El medico no existe");
+			response.setMessage("El médico no existe");
 			response.setData(null);
 		}
 		
