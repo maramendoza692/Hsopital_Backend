@@ -13,7 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableWebMvc
 @EnableSwagger2
-@ComponentScan("com.utng") //
+@ComponentScan("com.utng") 
 @ComponentScan(basePackages = "com.utng.*")
 public class HospitalApplication {
 
