@@ -62,13 +62,14 @@ public class EventoService implements IEventoService{
 			expediente = optionalExpediente.get();
 			evento1 = new Evento();
 			
+			evento1.setIdMedico(medico);
 			evento1.setIdExpediente(expediente);
 			evento1.setCausaIngreso(evento.getCausaIngreso());
 			evento1.setDiagnostico(evento.getDiagnostico());
 			evento1.setSintomas(evento.getSintomas());
 			evento1.setTratamiento(evento.getTratamiento());
 			evento1.setFecha(evento.getFecha());
-			evento1.setIdMedico(medico);
+		
 			
 			
 			

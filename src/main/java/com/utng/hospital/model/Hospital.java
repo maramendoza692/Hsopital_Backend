@@ -14,8 +14,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Entity 
-@Table(name = "HOSPITAL")
+@Entity (name = "HOSPITAL")
 public class Hospital implements Serializable{
 
 	
