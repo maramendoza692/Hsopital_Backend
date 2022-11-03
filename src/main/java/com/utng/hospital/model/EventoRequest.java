@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 public class EventoRequest {
 	
-	private Integer idEvento;
+	//private Integer idEvento;
 	
 	private Integer idMedico;
 	
@@ -25,7 +25,7 @@ public class EventoRequest {
 	
 	private String tratamiento;
 	
-	private Date fecha;
+	private Date fechaIngreso;
 	
-		
+	private Date fechaSalida;	
 }

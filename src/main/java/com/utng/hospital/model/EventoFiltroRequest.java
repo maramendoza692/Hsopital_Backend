@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class EventoFiltroRequest {
 	
-	private String curp;
+	private String fechaIngreso;
 	
 		
 }

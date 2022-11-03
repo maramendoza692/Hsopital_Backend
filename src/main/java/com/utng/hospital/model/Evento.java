@@ -18,7 +18,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Entity(name = "EVENTO")
+@Entity
+@Table(name = "EVENTO")
 public class Evento implements Serializable{
 	
 	/**
@@ -31,11 +32,11 @@ public class Evento implements Serializable{
 	@Column(name= "idEvento")
 	private Integer idEvento;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idMedico")
 	private Medico idMedico;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idExpediente")
 	private Expediente idExpediente;
 	
@@ -51,9 +52,10 @@ public class Evento implements Serializable{
 	@Column(name = "tratamiento")
 	private String tratamiento;
 	
-	@Column(name = "fecha")
-	private Date fecha;
+	@Column(name = "fechaIngreso")
+	private Date fechaIngreso;
 	
-	
+	@Column(name = "fechaSalida")
+	private Date fechaSalida;
 	
 }

@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.utng.hospital.model.Evento;
+import com.utng.hospital.model.EventoFiltroRequest;
 import com.utng.hospital.model.EventoRequest;
+import com.utng.hospital.model.Expediente;
+import com.utng.hospital.model.ExpedienteFiltroRequest;
 import com.utng.hospital.model.Response;
 import com.utng.hospital.service.IEventoService;
 
@@ -35,6 +38,18 @@ public class EventoController {
 		return new ResponseEntity<Response<Evento>> (lista, HttpStatus.OK);
 		
 	}
+	
+	@PostMapping(path = "/buscarEvento",
+			produces = MediaType.APPLICATION_JSON_VALUE,
+			consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Response<Evento>> buscarEvento (
+			@RequestBody EventoFiltroRequest filtro){
+				
+				Response<Evento> response = eventoService.buscarEvento(filtro);
+				
+				return new ResponseEntity<Response<Evento>>(response,HttpStatus.OK);
+			
+	} 
 	
 	@PostMapping(path = "/guardarEvento",
 			produces = MediaType.APPLICATION_JSON_VALUE,

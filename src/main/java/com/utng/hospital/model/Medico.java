@@ -16,7 +16,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Entity (name = "MEDICO")
+@Entity 
+@Table(name = "MEDICO")
 public class Medico implements Serializable{
 	/**
 	 * 
@@ -37,7 +38,7 @@ public class Medico implements Serializable{
 	@Column(name = "apeMat")
 	private String apeMat;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idHospital")
 	private Hospital idHospital;
 	
